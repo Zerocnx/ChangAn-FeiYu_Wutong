@@ -134,4 +134,4 @@ adb pull /system/framework/services.jar system '拷贝jar文件到工具箱下�
 
 ![13](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/9e7f4b04-41b9-4736-86f4-f2d8f33ddce7)
 
-下载地址：https://wwba.lanzoum.com/iHmOE0web3zg    密码:17710
+下载地址：https://wwba.lanzoum.com/b01evcsmj  密码:17710
