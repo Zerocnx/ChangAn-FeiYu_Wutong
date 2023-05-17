@@ -129,7 +129,66 @@ adb pull /system/framework/services.jar system '拷贝jar文件到工具箱下�
 6、部分车型破解安装软件后没有图标 可以下载小白点使用 已经有大佬在研究这个bug 后期可能会修复
 
 ```
+# 关于完美破解出现的问题
 
+## 目前测试的车型  锐程Plus   UNiv   cs55 二代，别的车型不要尝试，比如UNIT等
+
+### 1、VIA 浏览器图标没出现
+
+#### 请首先确认在车机应用商店安装过第三软件
+
+解决方法1：
+
+```shell
+#adb工具箱手搓
+adb root #获取root
+adb remount #挂载分区
+adb shell #进入shell模式，密码adb36987
+cd /system/priv-app/  #进入该目录
+pm install -r vi.apk  #安装via浏览器到data
+```
+
+解决方法2：在使用方法1还是没有图标的情况下
+
+```shell  
+#adb工具箱手搓
+adb root #获取root
+adb remount #挂载分区
+adb shell #进入shell模式，密码adb36987
+cd /system/priv-app/  #进入该目录
+rm -rf vi.apk #删除VI
+cd /data/app  #进入data
+rm -rf Mark   #这里按tab键会自动补全，然后回车
+reboot     #重启车机
+#车机重启成功输入下面的
+adb root #获取root
+adb remount #挂载分区
+adb push app/vi.apk /system/priv-app   #重新推送到分区 或者推送到 /system/app/
+adb reboot #重启
+```
+
+
+
+### 2、车机无声音
+
+解决方法：
+
+```shell
+#首先熄火断电，下车锁车五分钟，之后开启点火看按键有没有提示音 有就可以，没有的话按照下面的方式
+#adb 工具手搓
+adb root #获取root
+adb remount #挂载分区
+adb shell #进入shell模式，密码adb36987
+stop #停止系统
+sync #刷新缓存
+start #启动系统
+```
+
+## 如果以上都无法解决，建议还原破解，自己动手修改jar文件，可能是jar文件不匹配造成！
+
+## 如果以上都无法解决，建议还原破解，自己动手修改jar文件，可能是jar文件不匹配造成！
+
+## 如果以上都无法解决，建议还原破解，自己动手修改jar文件，可能是jar文件不匹配造成！
 工具箱截图：
 
 ![13](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/9e7f4b04-41b9-4736-86f4-f2d8f33ddce7)
