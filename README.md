@@ -23,7 +23,8 @@
 
 如图：
 
-![image-20230517105953753](D:\cydesk\Desktop\车机文档\image\1.png)
+![1](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/94694ffd-5d7d-4a15-b074-f148bf66849a)
+
 
 #### 一、根据Viking的思路之后的流程
 
@@ -41,21 +42,28 @@ adb pull /system/framework/services.jar system '拷贝jar文件到工具箱下�
 
 如图：
 
-![image-20230517110602750](D:\cydesk\Desktop\车机文档\image\2.png)
+
+![2](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/f58b0242-c00a-4e92-b905-68fb671ef0bb)
+
+
 
 > 将这部分代码转换成java代码 得到如下所示
 
-![image-20230517110822326](D:\cydesk\Desktop\车机文档\image\3.png)
+![3](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/521262a8-db97-4847-ba61-9e4dcf7ff287)
+
 
 > 然后将整段代码喂个GTP（不要问 问就是看不懂 纯小白） 得到以下结果
 
-![image-20230517110844867](D:\cydesk\Desktop\车机文档\image\4.png)
+![4](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/32bd6a0b-116d-4d52-8376-194de8a17114)
 
-![image-20230517110907718](D:\cydesk\Desktop\车机文档\image\5.png)
+
+![5](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/9af4e88e-7ada-48d6-b318-3e6354e5debc)
+
 
 > 发现是通过这行代码来判断应用是否通过认证 继续找gtp 
 
-![image-20230517110939230](D:\cydesk\Desktop\车机文档\image\6.png)
+![6](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/f0476d8b-b12e-4d55-898c-b833c943431c)
+
 
 > 按照GTP给的修改教程 改完之后发现我转不回dex里的smali代码了（问就是菜）…
 >
@@ -63,23 +71,23 @@ adb pull /system/framework/services.jar system '拷贝jar文件到工具箱下�
 >
 > 找到刚刚用MT搜索到的对应文件里面的对应内容
 
-![image-20230517111029977](D:\cydesk\Desktop\车机文档\image\7.png)
+![7](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/145b4918-4680-4cb5-b723-9f03918c39e4)
 
 >可以发现 java代码里的判断 对应的就这图上这几行，老规矩 找gtp，得到如下结果
 
-![image-20230517111256896](D:\cydesk\Desktop\车机文档\image\8.png)
+![8](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/8662d25f-1e5d-4c00-9565-57400ddad7af)
 
 > 然后让gpt 动手修改
 
-![image-20230517111330508](D:\cydesk\Desktop\车机文档\image\12.png)
+![12](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/69c8e8a8-89a3-4af1-861d-6f3f70263f6d)
 
 > 按照教程修改（一共有两个） 有两处install failed，我们需要修改两处，修改完后用MT反编译回去即可
 
 如图所示：
 
-![image-20230517111425569](D:\cydesk\Desktop\车机文档\image\9.png)
+![9](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/d61e2d14-30be-417e-a407-b86d8fcd56d5)
 
-![image-20230517111435763](D:\cydesk\Desktop\车机文档\image\10.png)
+![10](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/05bcb2d7-ef9e-4d8c-9879-d5e5c83daad2)
 
 ##### 2、开始测试流程
 
@@ -92,7 +100,7 @@ adb pull /system/framework/services.jar system '拷贝jar文件到工具箱下�
 
 安装成功的话如图所示：
 
-![image-20230517111653227](D:\cydesk\Desktop\车机文档\image\11.png)
+![11](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/7afb82b1-355b-4891-b2b7-64162f68fe6d)
 
 至此，流程结束。你的车机已经可以随便安装软件到data了。
 
@@ -124,6 +132,6 @@ adb pull /system/framework/services.jar system '拷贝jar文件到工具箱下�
 
 工具箱截图：
 
-![image-20230517142019653](D:\cydesk\Desktop\车机文档\image\13.png)
+![13](https://github.com/Zerocnx/ChangAn-FeiYu_Wutong/assets/32184355/9e7f4b04-41b9-4736-86f4-f2d8f33ddce7)
 
 下载地址：https://wwba.lanzoum.com/iHmOE0web3zg    密码:17710
